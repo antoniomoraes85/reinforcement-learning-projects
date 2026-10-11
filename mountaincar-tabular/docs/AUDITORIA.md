@@ -43,3 +43,7 @@ As médias têm apenas **3 seeds de treinamento independentes** por célula, ape
 ## Proveniência
 
 Síntese baseada em `PACOTE_REVISAO_TRIAGEM(1).zip`, `PACOTE_AUDITORIA_DYNA(1).zip` e auditoria independente produzida em 11/10/2026. O código disponibilizado era um *snapshot parcial* (módulos `config.py`, `storage.py`, scripts de runner e testes originais não vieram na exportação). Não representar esse snapshot como repositório integral executável.
+
+
+## Publicação dos dados
+O arquivo `resumo_execucoes.csv.gz` disponível no GitHub é uma **cópia derivada sem a coluna `config_hash`**, reduzida para publicação e armazenamento compacto. As 108 linhas e os valores numéricos das demais colunas foram preservados, sem arredondamento. A identidade pode ser verificada pelo conjunto (algoritmo, discretização, seed, α, λ, epsilon_decay, N). O CSV original com hashes está no pacote local de revisão, ainda não incorporado individualmente ao repositório.

@@ -23,7 +23,7 @@ O notebook:
 - **108/108 execuções** de triagem em resumos de resultados (3 algoritmos × 6 configurações por algoritmo × 2 discretizações × 3 seeds).
 - O pacote original de resultados individuais JSON não estava entre os arquivos fornecidos: validação direta de JSONs por execução permanece pendente.
 - `dados/triagem/selecionadas_por_discretizacao.csv`: médias de 3 seeds (50 episódios de avaliação por seed).
-- `dados/triagem/resumo_execucoes.csv.gz`: CSV com 108 resultados agregados **por execução** (não os JSONs completos).
+- `dados/triagem/resumo_execucoes.csv.gz`: CSV comprimido derivado de 108 resultados **por execução**, com todas as métricas preservadas mas sem a coluna de hashes de configuração (ver auditoria).
 - `figuras/`: gráficos vetoriais de síntese. O notebook também regenera visualizações mais detalhadas dos resumos.
 - `docs/AUDITORIA.md`: limitações, conclusões verificadas e pendências.
 
