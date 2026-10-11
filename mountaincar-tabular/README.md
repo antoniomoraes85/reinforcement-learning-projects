@@ -8,7 +8,7 @@ Comparação experimental de **Q-learning**, **SARSA(λ)** e **Dyna-Q**, conside
 
 ## Abrir no Google Colab
 
-[**Notebook interativo MountainCar CMP629**](https://colab.research.google.com/github/antoniomoraes85/reinforcement-learning-projects/blob/cmp629-mountaincar-triagem-auditoria-20261011/mountaincar-tabular/notebooks/MountainCar_CMP629_Colab.ipynb)
+[**Notebook interativo MountainCar CMP629**](https://colab.research.google.com/github/antoniomoraes85/reinforcement-learning-projects/blob/main/mountaincar-tabular/notebooks/MountainCar_CMP629_Colab.ipynb)
 
 O notebook:
 - carrega e valida os dados experimentais;
