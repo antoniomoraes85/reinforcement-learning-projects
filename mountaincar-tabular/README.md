@@ -1,58 +1,33 @@
-# CMP629 — Mini-projeto MountainCar-v0
+# CMP629 — MountainCar tabular
 
-**UFRGS · Aprendizado por Reforço · atualização: 11/10/2026**
+Comparação de Q-learning, SARSA(λ) e Dyna-Q em MountainCar-v0, com grades 4×2 e 12×4.
 
-Comparação experimental de **Q-learning**, **SARSA(λ)** e **Dyna-Q**, considerando as discretizações **4×2** e **12×4** do ambiente Gymnasium `MountainCar-v0`.
+## Estado verificável
 
-> **Status científico: TRIAGEM E AUDITORIA.** Os resultados apresentados **não são** o experimento final da disciplina. Não utilizar para declarar superioridade geral dos algoritmos.
+Triagem: **108 JSONs reais preservados**, três seeds por configuração. Gate FASE A: **GO**, 25 testes aprovados; seis smokes técnicos de cinco episódios. Campanha final de **60 treinamentos autorizada e em execução**; só tratar como concluída após `relatorios/final_v2/validacao_final.json` confirmar 60/60. Smoke não é campanha final.
 
-## Abrir no Google Colab
+- [Estado canônico](STATUS_CMP629.md)
+- [Parecer técnico](relatorios/parecer_liberacao_final.md)
+- [PowerShell e reprodução](COMO_EXECUTAR_POWERSHELL.md)
+- [Roteiro para o grupo](docs/ROTEIRO_APRESENTACAO.md)
+- [Google Colab — branch da entrega](https://colab.research.google.com/github/antoniomoraes85/reinforcement-learning-projects/blob/codex/cmp629-fase-a-20261011/mountaincar-tabular/notebooks/MountainCar_CMP629_Colab.ipynb)
 
-[**Notebook interativo MountainCar CMP629**](https://colab.research.google.com/github/antoniomoraes85/reinforcement-learning-projects/blob/main/mountaincar-tabular/notebooks/MountainCar_CMP629_Colab.ipynb)
+## Arquitetura e métricas
 
-O notebook:
-- carrega e valida os dados experimentais;
-- constrói gráficos comparativos por algoritmo e discretização;
-- separa taxa de sucesso durante treinamento exploratório da avaliação da política;
-- mostra efeitos de `N` no Dyna-Q;
-- executa uma demonstração **nova e independente**, explicitamente rotulada como demonstração e não como parte das 108 execuções originais;
-- exporta gráficos e tabelas.
+`src/mountaincar_rl`: agentes, configuração, persistência, análise. `testes`: testes TD/modelo/ambiente/reprodução/cache. `scripts`: execução, validação, gráficos e vídeos. `configs/protocolo_final_v2.json`: protocolo congelado. NPZ contém Q e configuração, sem pickle; hashes vinculam checkpoints e CSVs ao JSON da execução.
 
-## Evidência preservada
+Uma interação real = um `env.step`. Um TD real = um erro TD processado, mesmo quando SARSA atualiza várias coordenadas. Planejamento Dyna e componentes dos traços têm contadores próprios; não somá-los como operações equivalentes entre métodos. Tempo de treino exclui avaliação/renderização. Latência mede lookup/argmax/desempate, sem discretização/renderização; depende do hardware.
 
-- **108/108 execuções** de triagem em resumos de resultados (3 algoritmos × 6 configurações por algoritmo × 2 discretizações × 3 seeds).
-- O pacote original de resultados individuais JSON não estava entre os arquivos fornecidos: validação direta de JSONs por execução permanece pendente.
-- `dados/triagem/selecionadas_por_discretizacao.csv`: médias de 3 seeds (50 episódios de avaliação por seed).
-- `dados/triagem/resumo_execucoes.csv.gz`: CSV comprimido derivado de 108 resultados **por execução**, com todas as métricas preservadas mas sem a coluna de hashes de configuração (ver auditoria).
-- `figuras/`: gráficos vetoriais de síntese. O notebook também regenera visualizações mais detalhadas dos resumos.
-- `docs/AUDITORIA.md`: limitações, conclusões verificadas e pendências.
+`stable_episode` histórico é **primeiro atingimento do limiar**, não estabilidade sustentada. Sucesso final do treino é exploratório, avaliação é greedy. Bootstrap é mantido no TimeLimit e zerado no terminal real. Não é formulação exata de horizonte finito com tempo no estado.
 
-## Configuração do experimento original
+## Dados públicos e checkpoints
 
-| Aspecto | Configuração |
-|---|---|
-| Ambiente | MountainCar-v0, 3 ações discretas |
-| Limite | 200 passos por episódio |
-| Treinamento | 1.000 episódios por configuração |
-| Avaliação | 50 episódios por política |
-| γ | 0,99 |
-| Seeds de triagem | 100, 1100, 2100 |
-| Discretizações | 4×2, 12×4 |
-| Seleção | Maior AUC média de treinamento; **uma configuração global por algoritmo** |
+`dados/auditoria_v2/triagem_originais.zip` preserva os 108 JSONs e resumos científicos. `triagem_historicos.json.gz` é uma serialização comprimida derivada para o notebook; valores não alterados. Os logs operacionais locais não são publicados. `manifesto_publicacao.json` registra SHA-256 dos arquivos públicos.
 
-Hiperparâmetros selecionados originalmente:
-- SARSA(λ): `α=0,02`, `λ=0,9`, `decay=0,995`;
-- Q-learning: `α=0,1`, `decay=0,99`;
-- Dyna-Q: `α=0,05`, `N=5`, `decay=0,995`.
+Após conclusão, `final_v2_bundles.zip` conterá os 60 JSONs, 60 NPZs e 120 CSVs. Para reprodução local, extrair na pasta indicada em `COMO_EXECUTAR_POWERSHELL.md`; não misturar com `resultados/triagem`.
 
-## Limitações e próximos passos
+## Visualização
 
-1. Implementar e validar no projeto completo os ajustes indicados em `docs/AUDITORIA.md`.
-2. Corrigir a nomenclatura da métrica "estabilidade" para **primeiro atingimento de limiar**.
-3. Não confundir operações elementares de atualização Q entre SARSA(λ), Q-learning e Dyna-Q.
-4. Executar testes integrados do Dyna-Q, incluindo equivalência com Q-learning quando `N=0`.
-5. Só então congelar o protocolo e executar o experimento confirmatório.
+`figuras/auditoria_v2`: desempenho histórico, escalas comuns, curvas reais, sensibilidade/custos. `figuras/animacoes_auditoria_v2`: **smoke técnico**, não políticas históricas. A triagem original não salvava checkpoints; não recriamos nem atribuimos vídeos a ela. Política de exibição: menor seed de treino, reset 900000; falhas visíveis.
 
-**Origem:** análise de arquivos disponibilizados na conversa CMP629; dados de triagem preservados sem retreinamento.
-
-**Escopo:** este diretório NÃO inclui o material didático protegido da disciplina, a dissertação MPC/RL ou arquivos pessoais.
+Modo padrão do notebook não treina. `RUN_TRAINING` e `RUN_DEMO` ficam falsos. Colab hospedado não foi executado por esta máquina; validação usa kernel local limpo e downloads públicos. Não alegar superioridade geral nem causalidade do state aliasing. Material da disciplina/PDFs, credenciais e projeto Monte Carlo não são alterados/publicados por esta entrega.

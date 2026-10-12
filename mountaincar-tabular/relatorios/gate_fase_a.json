@@ -1,0 +1,9 @@
+{
+  "decision": "GO",
+  "failures": 0,
+  "historical_runs": 108,
+  "protocol_sha256": "fb1deb3ea35f1323438c10878f24225dfdb6fdebcd4c12cf50d0e714d2cf4094",
+  "scope": "Technical readiness for authorized final campaign; not scientific conclusions or hosted Colab certification",
+  "smoke_runs": 6,
+  "tests": 25
+}

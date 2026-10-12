@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "experiment_version": "mountaincar-triagem-v1.0",
+  "phase": "triagem",
+  "environment": {
+    "id": "MountainCar-v0",
+    "action_count": 3,
+    "max_episode_steps": 200
+  },
+  "training": {
+    "episodes": 1000,
+    "gamma": 0.99,
+    "epsilon_start": 1.0,
+    "epsilon_min": 0.02
+  },
+  "evaluation": {
+    "episodes": 50
+  },
+  "seeds": [100, 1100, 2100],
+  "discretizations": {
+    "4x2": {
+      "shape": [4, 2],
+      "position_edges": [-0.6, -0.2, 0.2],
+      "velocity_edges": [0.0]
+    },
+    "12x4": {
+      "shape": [12, 4],
+      "position_edges": [-1.05, -0.9, -0.75, -0.6, -0.45, -0.3, -0.15, 0.0, 0.15, 0.3, 0.45],
+      "velocity_edges": [-0.02, 0.0, 0.02]
+    }
+  },
+  "algorithms": {
+    "q_learning": {
+      "grid": {
+        "alpha": [0.05, 0.1, 0.2],
+        "lambda": [0.0],
+        "epsilon_decay": [0.99, 0.995],
+        "N": [0]
+      }
+    },
+    "sarsa_lambda": {
+      "grid": {
+        "alpha": [0.02, 0.05, 0.1],
+        "lambda": [0.7, 0.9],
+        "epsilon_decay": [0.995],
+        "N": [0]
+      }
+    },
+    "dyna_q": {
+      "grid": {
+        "alpha": [0.05, 0.1],
+        "lambda": [0.0],
+        "epsilon_decay": [0.995],
+        "N": [1, 5, 10]
+      },
+      "model": "empirical_outcome_distribution"
+    }
+  },
+  "selection": {
+    "final_window_episodes": 100,
+    "rolling_window": 20,
+    "stability_success_threshold": 0.8,
+    "stability_consecutive_windows": 5,
+    "hierarchy": [
+      "auc_normalized_desc",
+      "final_window_success_desc",
+      "interactions_to_stability_asc",
+      "total_q_updates_asc",
+      "auc_between_seed_std_asc"
+    ],
+    "one_configuration_per_algorithm_across_discretizations": true,
+    "exclude_dyna_n_zero": true
+  }
+}
+
