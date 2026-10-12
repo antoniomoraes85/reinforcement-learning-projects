@@ -20,7 +20,7 @@ def main():
         for path in (ROOT/folder).rglob('*'):
             if path.is_file() and '__pycache__' not in path.parts and path.suffix in ['.py','.json','.md','.ipynb']:
                 copy(path,path.relative_to(ROOT))
-    for name in ['requirements.txt','requirements-entrega.txt','STATUS_CMP629.md','COMO_EXECUTAR_POWERSHELL.md','README.md']:
+    for name in ['requirements.txt','requirements-entrega.txt','requirements-lock-validacao.txt','STATUS_CMP629.md','COMO_EXECUTAR_POWERSHELL.md','README.md']:
         if (ROOT/name).exists():copy(ROOT/name,Path(name))
     # Do not publish local logs / reports containing personal absolute paths.
     for path in (ROOT/'relatorios').rglob('*'):

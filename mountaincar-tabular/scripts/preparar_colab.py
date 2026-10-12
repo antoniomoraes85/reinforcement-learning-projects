@@ -129,6 +129,51 @@ print("Exportação: CMP629_apresentacao.zip; treinamento não executado por pad
 # from google.colab import files
 # files.download("CMP629_apresentacao.zip")''')]
     nb.metadata={'kernelspec':{'display_name':'Python 3','language':'python','name':'python3'},'language_info':{'name':'python'}}
+    if (ROOT/'relatorios/final_v2/validacao_final.json').exists():
+        nb.cells[0]=md('''# CMP629 — MountainCar: entrega final
+
+**60 treinamentos finais validados**, além das 108 execuções históricas preservadas. Modo apresentação, sem retreino por padrão. A campanha final usa 10 seeds de treinamento por algoritmo/grade, 100 episódios de avaliação por política e hiperparâmetros congelados pela triagem. Vídeos finais carregam checkpoints reais; os vídeos de smoke permanecem identificados separadamente.
+
+O notebook apresenta primeiro a proveniência da triagem e depois os resultados finais, sem misturar amostras.''')
+        new=[md('''## Campanha final: 60 políticas independentes
+
+Dez seeds por célula; IC calculado entre políticas. As 100 avaliações de uma política não são 100 treinamentos. Retorno e duração são redundantes neste benchmark (recompensa −1 por passo), mas registrados separadamente para auditoria. Parâmetros globais não foram reajustados pelo teste final.'''),
+             code('''final_histories=json.loads(gzip.decompress(verified("dados/auditoria_v2/final_historicos.json.gz")))
+assert len(final_histories)==60 and len({r["config_hash"] for r in final_histories})==60
+final_metrics=pd.read_csv(io.BytesIO(verified("relatorios/final_v2/metricas_por_seed.csv")))
+final_summary=pd.read_csv(io.BytesIO(verified("relatorios/final_v2/estatisticas_entre_seeds.csv")))
+display(final_summary[final_summary.metric.isin(["evaluation_success_rate","mean_steps_all","mean_steps_success"])].round(4))
+display(Markdown(verified("relatorios/final_v2/RESULTADOS.md").decode("utf-8")))
+final_metrics.to_csv(OUT/"metricas_finais_por_seed.csv",index=False)'''),
+             code('''for disc in ("4x2","12x4"):
+    for figure in ("painel", "episode_returns", "episode_successes", "custos_limiar", "custos_separados"):
+        data=verified(f"figuras/final_v2/{figure}_{disc}.png")
+        (OUT/f"final_{figure}_{disc}.png").write_bytes(data)
+        display(Image(data,width=1050))'''),
+             md('''### Políticas, trajetórias e animações finais
+
+Menor seed de treino (3100), reset 900000 previamente fixado, mesmas condições iniciais entre métodos. Não é seleção da melhor política. Mapas Q usam as fronteiras físicas das células; −1 na política significa empate. Uma trajetória não estima a taxa média de sucesso.'''),
+             code('''for disc in ("4x2","12x4"):
+    for alg in ("q_learning","sarsa_lambda","dyna_q"):
+        name=f"{alg}__{disc}__s3100"
+        display(Image(verified(f"figuras/animacoes_final_v2/{name}.policy.png"),width=1050))
+        display(Image(verified(f"figuras/animacoes_final_v2/{name}.trajectory.png"),width=1000))
+    path=OUT/f"final_comparacao_{disc}.mp4"
+    path.write_bytes(verified(f"figuras/animacoes_final_v2/comparacao_{disc}.mp4"))
+    display(Video(str(path),embed=True,width=1050))'''),
+             md('''### Interpretação e limites
+
+As diferenças valem para este protocolo, estas grades e os hiperparâmetros globais escolhidos. O efeito isolado de aliasing não foi identificado. Sensibilidade a N vem da triagem, não de novos ajustes finais. IC t com dez seeds é aproximado; conferir pontos individuais, mediana e DP. Comparações inferenciais AUC usam Friedman e Wilcoxon pareado com Holm por grade, conforme protocolo; sucesso avaliado é relatado descritivamente. Duração condicional omite políticas sem sucesso e traz seu denominador próprio. Latência e wall-clock dependem da máquina/carga.
+
+Resultado/Discussão completos e condições de reprodução estão no relatório técnico público.''')]
+        nb.cells[-2:-2]=new
+        nb.cells[-2]=md('''## Exportação e reprodução
+
+Campanha final concluída e validada; nenhum retreino é necessário para apresentar. Scripts e bundles completos permitem reprodução. O Colab hospedado não foi executado por esta máquina; o notebook foi verificado com kernel local limpo e downloads públicos.''')
+    import sys
+    if '--main' in sys.argv:
+        for cell in nb.cells:
+            if cell.cell_type=='code':cell.source=cell.source.replace('BRANCH = "codex/cmp629-fase-a-20261011"','BRANCH = "main"')
     target=ROOT/'notebooks/MountainCar_CMP629_Colab.ipynb'
     target.parent.mkdir(exist_ok=True)
     nbf.validate(nb); nbf.write(nb,target)
