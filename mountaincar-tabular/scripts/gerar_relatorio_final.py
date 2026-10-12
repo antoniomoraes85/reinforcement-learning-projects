@@ -10,7 +10,14 @@ def main():
     validation=json.loads((out/'validacao_final.json').read_text(encoding='utf-8'))
     assert validation['valid_runs']==60
     rows=pd.read_csv(out/'metricas_por_seed.csv')
-    table=(out/'RESULTADOS.md').read_text(encoding='utf-8')
+    table=(out/'RESULTADOS.md').read_text(encoding='utf-8').replace('# Campanha final','### Campanha final',1)
+    summary=pd.read_csv(out/'estatisticas_entre_seeds.csv')
+    ci_lines=['### Incerteza e variabilidade entre seeds','',
+              '| Método | Grade | Média | Mediana | DP (pp) | IC t 95% não truncado |',
+              '|---|---|---:|---:|---:|---:|']
+    for row in summary[summary.metric=='evaluation_success_rate'].itertuples():
+        ci_lines.append(f'| {row.algorithm} | {row.discretization} | {row.mean:.2%} | {row.median:.2%} | {row.std*100:.2f} | [{row.ci95_low:.2%}, {row.ci95_high:.2%}] |')
+    ci_lines.append('\nDez políticas por célula. A grande diferença média/mediana em Q-learning 4×2 e Dyna-Q 12×4 evidencia variabilidade. IC t pode ultrapassar [0,1]; limites externos não são probabilidades. DP zero e IC degenerado não provam probabilidade populacional exatamente zero ou um. Duração condicional usa apenas políticas com sucesso; seus denominadores estão na tabela longa.')
     inference=json.loads((out/'inferencia_auc.json').read_text(encoding='utf-8'))
     tests=[]
     for disc,item in inference['by_discretization'].items():
@@ -45,6 +52,8 @@ Sucesso na avaliação; retorno episódico; passos com e sem condicionamento ao 
 
 {chr(10).join(observations)}
 
+{chr(10).join(ci_lines)}
+
 ### Comparações inferenciais da AUC de treinamento
 Não confundir estes testes com testes de taxa de sucesso de avaliação. Holm controla três comparações por grade; não uma família global englobando as duas grades. Bootstrap é pareado por seed, 10000 reamostragens com seed fixa.
 
@@ -63,7 +72,7 @@ Amostra de dez seeds, duas grades, um único benchmark, resets estreitos e hiper
 O experimento oferece uma comparação reproduzível dos métodos sob o protocolo congelado, não um ranking geral de algoritmos. A evidência combina desempenho e variabilidade entre políticas, com custos em unidades explícitas. Discussões de causalidade ou transferência para controle MPC/RL demandam novos experimentos: esta entrega serve de referência metodológica, não de evidência direta sobre sistemas físicos.
 
 ## 9. Reprodutibilidade e artefatos
-`validacao_final.json`: 60/60 bundles validados, 60 NPZs e 120 CSVs; JSON por execução vincula configuração, versions, commit, datas e hashes. `metricas_por_seed.csv`, `estatisticas_entre_seeds.csv`, `inferencia_auc.json`: resultados inspectáveis. `figuras/final_v2` e `figuras/animacoes_final_v2`: gráficos/rollouts reais. Manifesto SHA-256 preserva os históricos; extração pública não sobrescreve arquivos divergentes. Testes TD/traços/Dyna/seeds/cache e reavaliação dos checkpoints completam as verificações.
+`validacao_final.json`: 60/60 bundles validados, 60 NPZs e 120 CSVs; JSON por execução vincula configuração, versões, commit, datas e hashes. `metricas_por_seed.csv`, `estatisticas_entre_seeds.csv`, `inferencia_auc.json`: resultados inspectáveis. `figuras/final_v2` e `figuras/animacoes_final_v2`: gráficos/rollouts reais. Manifesto SHA-256 preserva os históricos; extração pública não sobrescreve arquivos divergentes. A entrega verifica hashes, reconciliação das tabelas e ações greedy das seis trajetórias contra seus checkpoints. Não afirma nova reavaliação das 60 políticas.
 '''
     (out/'RELATORIO_TECNICO.md').write_text(report,encoding='utf-8')
     print('Academic report generated from validated 60-run evidence')

@@ -1,7 +1,7 @@
 {
   "ref": "codex/cmp629-fase-a-20261011",
-  "verified_files": 113,
-  "verified_bytes": 10058405,
+  "verified_files": 203,
+  "verified_bytes": 23718432,
   "failures": [],
   "video_decode": [
     {
@@ -13,28 +13,28 @@
       "decoded_frames": 200
     },
     {
-      "file": "dyna_q__12x4__s700001.mp4",
+      "file": "dyna_q__12x4__s3100.mp4",
       "decoded_frames": 200
     },
     {
-      "file": "dyna_q__4x2__s700001.mp4",
+      "file": "dyna_q__4x2__s3100.mp4",
       "decoded_frames": 200
     },
     {
-      "file": "q_learning__12x4__s700001.mp4",
+      "file": "q_learning__12x4__s3100.mp4",
       "decoded_frames": 200
     },
     {
-      "file": "q_learning__4x2__s700001.mp4",
+      "file": "q_learning__4x2__s3100.mp4",
       "decoded_frames": 200
     },
     {
-      "file": "sarsa_lambda__12x4__s700001.mp4",
-      "decoded_frames": 200
+      "file": "sarsa_lambda__12x4__s3100.mp4",
+      "decoded_frames": 169
     },
     {
-      "file": "sarsa_lambda__4x2__s700001.mp4",
-      "decoded_frames": 200
+      "file": "sarsa_lambda__4x2__s3100.mp4",
+      "decoded_frames": 185
     }
   ],
   "hosted_colab_executed": false
