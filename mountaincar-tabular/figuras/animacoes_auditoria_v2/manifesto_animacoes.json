@@ -1,0 +1,107 @@
+{
+  "rollouts": [
+    {
+      "algorithm": "q_learning",
+      "discretization": "4x2",
+      "experiment_id": "cmp629-audit-smoke-v2",
+      "initial_state": [
+        -0.5963094234466553,
+        0.0
+      ],
+      "reset_seed": 900000,
+      "return": -200.0,
+      "source_checkpoint_sha256": "951fe04c22ae6819ef4055eeb1597e82402e98c5306cca4e43359b956d2a948b",
+      "steps": 200,
+      "success": false,
+      "train_seed": 700001,
+      "video": "q_learning__4x2__s700001.mp4",
+      "video_sha256": "8718cb88b1fe0cd2d74388bca29e454f38997773f2812d241ee827ed745f7f6c"
+    },
+    {
+      "algorithm": "sarsa_lambda",
+      "discretization": "4x2",
+      "experiment_id": "cmp629-audit-smoke-v2",
+      "initial_state": [
+        -0.5963094234466553,
+        0.0
+      ],
+      "reset_seed": 900000,
+      "return": -200.0,
+      "source_checkpoint_sha256": "25c1b32124b79f8fe1c5fd1195bdac6fa45db286c9d1f71966af3f6f98e9ba11",
+      "steps": 200,
+      "success": false,
+      "train_seed": 700001,
+      "video": "sarsa_lambda__4x2__s700001.mp4",
+      "video_sha256": "f81c740ffbb41df61370b1b91f59eb38a252b6677e8fb6abf7e2a0a93c378c6b"
+    },
+    {
+      "algorithm": "dyna_q",
+      "discretization": "4x2",
+      "experiment_id": "cmp629-audit-smoke-v2",
+      "initial_state": [
+        -0.5963094234466553,
+        0.0
+      ],
+      "reset_seed": 900000,
+      "return": -200.0,
+      "source_checkpoint_sha256": "e4713171e0f6842f1c23e0880de9cb21bec1b89b19623af5ad85b7d6cc7587e4",
+      "steps": 200,
+      "success": false,
+      "train_seed": 700001,
+      "video": "dyna_q__4x2__s700001.mp4",
+      "video_sha256": "fe703629b674e9262cfd6705493119d83c54e7a3b96f942ee03c51fc0d483c1c"
+    },
+    {
+      "algorithm": "q_learning",
+      "discretization": "12x4",
+      "experiment_id": "cmp629-audit-smoke-v2",
+      "initial_state": [
+        -0.5963094234466553,
+        0.0
+      ],
+      "reset_seed": 900000,
+      "return": -200.0,
+      "source_checkpoint_sha256": "72a99557200cae77ef95962515edb6f84b7e49f0433cc0194e52a468ce6e09aa",
+      "steps": 200,
+      "success": false,
+      "train_seed": 700001,
+      "video": "q_learning__12x4__s700001.mp4",
+      "video_sha256": "5d6ebb1d0639549cc8c02035183efcea343c7e892bde90e5c545536e67d2c908"
+    },
+    {
+      "algorithm": "sarsa_lambda",
+      "discretization": "12x4",
+      "experiment_id": "cmp629-audit-smoke-v2",
+      "initial_state": [
+        -0.5963094234466553,
+        0.0
+      ],
+      "reset_seed": 900000,
+      "return": -200.0,
+      "source_checkpoint_sha256": "4c2aef5d4753e1e03cc519640696ccead35a77c2796305d9d16ef633acf4fdb7",
+      "steps": 200,
+      "success": false,
+      "train_seed": 700001,
+      "video": "sarsa_lambda__12x4__s700001.mp4",
+      "video_sha256": "b16b6d99ccdd43f89a4239af05a15fe928a4010e7d7a728e494c919cedb2d502"
+    },
+    {
+      "algorithm": "dyna_q",
+      "discretization": "12x4",
+      "experiment_id": "cmp629-audit-smoke-v2",
+      "initial_state": [
+        -0.5963094234466553,
+        0.0
+      ],
+      "reset_seed": 900000,
+      "return": -200.0,
+      "source_checkpoint_sha256": "90bab9533edd200cbe29756b7d0774b4be044128c3685d03e011650359f756c3",
+      "steps": 200,
+      "success": false,
+      "train_seed": 700001,
+      "video": "dyna_q__12x4__s700001.mp4",
+      "video_sha256": "9e8c9c450afef0821d6e5ad87f35c7f8ee3bb2821759b86b820d2ff96fb3c6c4"
+    }
+  ],
+  "selection_rule": "smallest training seed, fixed demo seed 900000; no outcome selection"
+}

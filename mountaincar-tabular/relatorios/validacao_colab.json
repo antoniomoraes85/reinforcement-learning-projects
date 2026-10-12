@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "code_cells": 6,
+  "errors": 0,
+  "wall_seconds": 15.70846000011079,
+  "environment": "fresh Python venv, fresh kernel and empty working directory",
+  "hosted_colab_executed": false,
+  "public_downloads_verified": true
+}

@@ -1,0 +1,54 @@
+{
+  "final_runs": 60,
+  "checkpoints": 60,
+  "raw_csvs": 120,
+  "training_runs_executed": 0,
+  "raw_artifacts_hashed": 240,
+  "chart_seed_rows_reconciled": 60,
+  "verified_greedy_trajectories": 6,
+  "decoded_videos": [
+    {
+      "file": "comparacao_12x4.mp4",
+      "frames": 200,
+      "sha256": "910814e95dcc4c0d3515f81035a02a4486674f9e3d2edcc2d3e86aa736782a14"
+    },
+    {
+      "file": "comparacao_4x2.mp4",
+      "frames": 200,
+      "sha256": "7cb1c7d39e1c95ff2ac37e7806ec222d57ce3e8875eeecb8ac0c1f5c3c02a19f"
+    },
+    {
+      "file": "dyna_q__12x4__s3100.mp4",
+      "frames": 200,
+      "sha256": "ef94bca5d8f81f2fed7a7422f59f9ef1db5d72c33b4c0c72215931c85dd3fc6f"
+    },
+    {
+      "file": "dyna_q__4x2__s3100.mp4",
+      "frames": 200,
+      "sha256": "3a0af9b6d1a82f176e43c50eba4d55248f35e00562cc4080c6a911f16a5cdd7a"
+    },
+    {
+      "file": "q_learning__12x4__s3100.mp4",
+      "frames": 200,
+      "sha256": "676c9947a6bc874e6dfe8f2d2efbba6c70a8b282d8583446c5ba786a08f47a88"
+    },
+    {
+      "file": "q_learning__4x2__s3100.mp4",
+      "frames": 200,
+      "sha256": "7b9473337749b460f5fecd9cc630e0d63361c97e50d3c59beb617c32881a3ba8"
+    },
+    {
+      "file": "sarsa_lambda__12x4__s3100.mp4",
+      "frames": 169,
+      "sha256": "c0cca834b232f4247911edd5436d5de65bec18d9bff146d61f712d6d1d08eeb1"
+    },
+    {
+      "file": "sarsa_lambda__4x2__s3100.mp4",
+      "frames": 185,
+      "sha256": "21dac321f4a50a504ab72784cdd882dc95d965dc1cd97a113c91436b9ff0931a"
+    }
+  ],
+  "pngs_checked": 24,
+  "status": "passed",
+  "protocol_sha256": "fb1deb3ea35f1323438c10878f24225dfdb6fdebcd4c12cf50d0e714d2cf4094"
+}

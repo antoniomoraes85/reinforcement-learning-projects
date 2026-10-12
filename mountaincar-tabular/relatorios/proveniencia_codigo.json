@@ -1,0 +1,17 @@
+{
+  "training_commit_local": "f31e7b5744cd8f0610742c1ca8846ec74c597046",
+  "source_sha256": {
+    "src/mountaincar_rl/__init__.py": "ddde7972891011dbea731d3db9af7b0c6defa5a24aceb3418ec5852039b36289",
+    "src/mountaincar_rl/agents.py": "6e83091174ecb41592f05561ecdccab7aa1f2ec0627ba11029a5d8f618e598c8",
+    "src/mountaincar_rl/analysis.py": "4d210a90cf82b10f53063f723226162691a228d7bcc2fb31e3dd4cd7b947342f",
+    "src/mountaincar_rl/checkpoints.py": "72ca84868dd13275f3bc0d8453927577a2ff41db83bc007403f818b2541dc839",
+    "src/mountaincar_rl/config.py": "002edfc49c60f9dae07662ae68c09038d28027ffaf8fa12531b875c750b7d8dd",
+    "src/mountaincar_rl/experiment.py": "db2630374e0e7629de3b742b8cb027d5586579213a004d76000550854663ad07",
+    "src/mountaincar_rl/metrics.py": "a2f3bcb49d1b59fa2b49b636f0e7ef5281e07791278f1ad2c1ef3ad58a1cf42f",
+    "src/mountaincar_rl/plotting.py": "126e8402fc238a7f400ba2cb38ae42b7638550280daf86304799b9e999a5394d",
+    "src/mountaincar_rl/runner.py": "eba4509dbeb5035921b2616635e27a8403ac89f82ab910038b9ab78cab4e5c32",
+    "src/mountaincar_rl/storage.py": "a32343c26c2b69957c8b39cac4364123c115486ecf0c45d710643c2bdd7b5487",
+    "src/mountaincar_rl/validation.py": "a72c6ac5b29f2ae91aee9946553c584a393fe51199684bf26a0d5e7fdbb4aff4"
+  },
+  "note": "Local Git root differs from public monorepo. Exact module hashes map the recorded local commit to public source bytes. No training module changed during the campaign."
+}
