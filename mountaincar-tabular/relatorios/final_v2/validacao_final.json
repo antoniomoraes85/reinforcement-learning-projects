@@ -1,0 +1,9 @@
+{
+  "checkpoints": 60,
+  "evaluation_seeds_common": true,
+  "expected": 60,
+  "protocol_sha256": "fb1deb3ea35f1323438c10878f24225dfdb6fdebcd4c12cf50d0e714d2cf4094",
+  "raw_csvs": 120,
+  "valid": true,
+  "valid_runs": 60
+}

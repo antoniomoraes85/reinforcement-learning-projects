@@ -14,13 +14,14 @@ TD/traços/modelo empírico testados; checkpoint NPZ com SHA/config; avaliação
 ## Campanha final
 `configs/protocolo_final_v2.json`, saída `resultados/cmp629-final-v2-20261011`.
 60 configurações: 3 métodos × 2 grades × 10 seeds. Hiperparâmetros globais da triagem congelados. Treino: 1000 episódios; avaliação: 100 seeds comuns (800000–800099). Seed de exibição 900000, menor seed de treino; regra definida antes de assistir aos vídeos.
-Campanha iniciada após GO; atualizar este estado com a validação de conclusão. Nunca tratar resultados ainda ausentes como zero.
+**Campanha concluída e validada: 60/60 execuções, 60 checkpoints, 120 CSVs; protocolo SHA-256 `fb1deb3ea35f1323438c10878f24225dfdb6fdebcd4c12cf50d0e714d2cf4094`.** Rodada de 12/10/2026 restrita à entrega: nenhum treino ou teste exploratório repetido. Os 240 arquivos brutos foram reconciliados e têm manifesto próprio.
 
 ## Decisões metodológicas
 3 ações, TimeLimit 200, γ=0,99. Bootstrap em truncamento, não em terminal real. Traços acumulativos reiniciados a cada episódio. Modelo Dyna distribui desfechos empiricamente. Desempates greedy aleatórios reprodutíveis. Não inferir causalidade de state aliasing. `stable_episode` legado significa primeiro atingimento do limiar; `total_q_updates` tem unidades heterogêneas.
 
 ## Próxima ação
-Concluir e validar a campanha; analisar sem nova seleção; gerar animações finais; executar Colab em kernel limpo; publicar, verificar e integrar. Usar cache para preservar execuções completas em eventual retomada.
+Publicar e verificar os artefatos finais na branch de entrega; validar notebook em kernel limpo local; integrar o PR #2 somente após os checks de entrega. Não há treinamento pendente. Colab hospedado não foi executado.
 
 ## Histórico
 - 11/10/2026: inventário, baseline Git, manifesto, 25 testes, seis smokes, GO, início autorizado da campanha final. Figuras históricas corrigidas em pasta nova; oito MP4s de smoke reais produzidos (seis individuais e duas comparações), sem atribuição às políticas antigas.
+- 12/10/2026: campanha final concluída antes desta rodada; 60/60 confirmados. Entrega revisada: 24 PNGs finais (12 gráficos, seis mapas Q/política, seis trajetórias) e oito MP4s verificados; seis trajetórias greedy conferidas com os checkpoints. Relatório complementado com IC, medianas e denominadores condicionais. Suíte prévia de 33 testes preservada, sem repetição.

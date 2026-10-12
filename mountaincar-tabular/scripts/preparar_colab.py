@@ -166,10 +166,19 @@ Menor seed de treino (3100), reset 900000 previamente fixado, mesmas condições
 As diferenças valem para este protocolo, estas grades e os hiperparâmetros globais escolhidos. O efeito isolado de aliasing não foi identificado. Sensibilidade a N vem da triagem, não de novos ajustes finais. IC t com dez seeds é aproximado; conferir pontos individuais, mediana e DP. Comparações inferenciais AUC usam Friedman e Wilcoxon pareado com Holm por grade, conforme protocolo; sucesso avaliado é relatado descritivamente. Duração condicional omite políticas sem sucesso e traz seu denominador próprio. Latência e wall-clock dependem da máquina/carga.
 
 Resultado/Discussão completos e condições de reprodução estão no relatório técnico público.''')]
-        nb.cells[-2:-2]=new
-        nb.cells[-2]=md('''## Exportação e reprodução
+        provenance=md('''## Apêndice: proveniência da triagem
 
-Campanha final concluída e validada; nenhum retreino é necessário para apresentar. Scripts e bundles completos permitem reprodução. O Colab hospedado não foi executado por esta máquina; o notebook foi verificado com kernel local limpo e downloads públicos.''')
+As 108 execuções históricas abaixo foram preservadas. Esta tabela é **exploratória** e não integra as 60 execuções finais. Todos os gráficos e vídeos exibidos acima são da campanha final; figuras de sensibilidade a N da triagem permanecem disponíveis no repositório, sem atribuição ao experimento final.''')
+        nb.cells=nb.cells[:3]+new+[provenance,nb.cells[4],md('''## Exportação e reprodução
+
+Campanha final concluída e validada; nenhum retreino é necessário para apresentar. Scripts e bundles completos permitem reprodução. O Colab hospedado não foi executado por esta máquina; a validação usa kernel local limpo e downloads públicos.'''),nb.cells[-1]]
+        nb.cells[-1].source=nb.cells[-1].source.replace('report = verified("relatorios/parecer_liberacao_final.md")',
+            'academic = verified("relatorios/final_v2/RELATORIO_TECNICO.md")\n(OUT/"RELATORIO_TECNICO.md").write_bytes(academic)\nreport = verified("relatorios/parecer_liberacao_final.md")')
+        nb.cells[0].source=nb.cells[0].source.replace('O notebook apresenta primeiro a proveniência da triagem e depois os resultados finais, sem misturar amostras.',
+            'Todos os gráficos e vídeos exibidos são da campanha final. A proveniência da triagem aparece em apêndice, sem misturar amostras.')
+        new[-1].source += '\n\nIC degenerado (DP zero, todas as políticas com 0% ou 100%) descreve esta amostra, não prova probabilidade populacional exatamente zero ou um. IC t não truncados estão na tabela; limites fora de [0,1] evidenciam a aproximação.'
+    for cell in nb.cells:
+        if cell.cell_type=='markdown':cell.source=cell.source.replace('\\\\','\\')
     import sys
     if '--main' in sys.argv:
         for cell in nb.cells:

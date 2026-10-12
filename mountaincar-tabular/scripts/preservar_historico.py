@@ -20,7 +20,11 @@ def main():
     if count != 108:
         raise RuntimeError(f'Expected 108 individual historical JSONs, found {count}')
     if TARGET.exists():
-        assert json.loads(TARGET.read_text(encoding='utf-8'))['files'] == current, 'Historical files changed'
+        expected=json.loads(TARGET.read_text(encoding='utf-8'))['files']
+        if '--publico' in sys.argv:
+            assert all(expected.get(k)==v for k,v in current.items()), 'Public historical files changed'
+        else:
+            assert expected == current, 'Historical files changed'
         print(f'Preserved: {count} runs; {len(current)} historical files; all hashes match')
     else:
         with TARGET.open('x', encoding='utf-8') as stream:

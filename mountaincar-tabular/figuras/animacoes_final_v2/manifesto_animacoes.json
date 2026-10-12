@@ -1,0 +1,107 @@
+{
+  "rollouts": [
+    {
+      "algorithm": "q_learning",
+      "discretization": "4x2",
+      "experiment_id": "cmp629-final-v2-20261011",
+      "initial_state": [
+        -0.5963094234466553,
+        0.0
+      ],
+      "reset_seed": 900000,
+      "return": -200.0,
+      "source_checkpoint_sha256": "dc8d10d71f6fb91714e4ad25bcacbcb641edde051245665b463dd943d36229c7",
+      "steps": 200,
+      "success": false,
+      "train_seed": 3100,
+      "video": "q_learning__4x2__s3100.mp4",
+      "video_sha256": "7b9473337749b460f5fecd9cc630e0d63361c97e50d3c59beb617c32881a3ba8"
+    },
+    {
+      "algorithm": "sarsa_lambda",
+      "discretization": "4x2",
+      "experiment_id": "cmp629-final-v2-20261011",
+      "initial_state": [
+        -0.5963094234466553,
+        0.0
+      ],
+      "reset_seed": 900000,
+      "return": -185.0,
+      "source_checkpoint_sha256": "afb0b98f2acaf76d14d165e4f2774492231ccfe9388be8c9a5450c96236178f3",
+      "steps": 185,
+      "success": true,
+      "train_seed": 3100,
+      "video": "sarsa_lambda__4x2__s3100.mp4",
+      "video_sha256": "21dac321f4a50a504ab72784cdd882dc95d965dc1cd97a113c91436b9ff0931a"
+    },
+    {
+      "algorithm": "dyna_q",
+      "discretization": "4x2",
+      "experiment_id": "cmp629-final-v2-20261011",
+      "initial_state": [
+        -0.5963094234466553,
+        0.0
+      ],
+      "reset_seed": 900000,
+      "return": -200.0,
+      "source_checkpoint_sha256": "bc42097cfe6a2f255307e4e9bb048f119cb23eeff607ef158693b2cce0cf4028",
+      "steps": 200,
+      "success": false,
+      "train_seed": 3100,
+      "video": "dyna_q__4x2__s3100.mp4",
+      "video_sha256": "3a0af9b6d1a82f176e43c50eba4d55248f35e00562cc4080c6a911f16a5cdd7a"
+    },
+    {
+      "algorithm": "q_learning",
+      "discretization": "12x4",
+      "experiment_id": "cmp629-final-v2-20261011",
+      "initial_state": [
+        -0.5963094234466553,
+        0.0
+      ],
+      "reset_seed": 900000,
+      "return": -200.0,
+      "source_checkpoint_sha256": "59522ad3906ef12c9c1ff434df35ec42bc113fa79995b478ce291065b8d8daba",
+      "steps": 200,
+      "success": false,
+      "train_seed": 3100,
+      "video": "q_learning__12x4__s3100.mp4",
+      "video_sha256": "676c9947a6bc874e6dfe8f2d2efbba6c70a8b282d8583446c5ba786a08f47a88"
+    },
+    {
+      "algorithm": "sarsa_lambda",
+      "discretization": "12x4",
+      "experiment_id": "cmp629-final-v2-20261011",
+      "initial_state": [
+        -0.5963094234466553,
+        0.0
+      ],
+      "reset_seed": 900000,
+      "return": -169.0,
+      "source_checkpoint_sha256": "ac5f4091474c65d72e4455b59b7ec681447acbe41b3f3ef6532cf9e08c1f438a",
+      "steps": 169,
+      "success": true,
+      "train_seed": 3100,
+      "video": "sarsa_lambda__12x4__s3100.mp4",
+      "video_sha256": "c0cca834b232f4247911edd5436d5de65bec18d9bff146d61f712d6d1d08eeb1"
+    },
+    {
+      "algorithm": "dyna_q",
+      "discretization": "12x4",
+      "experiment_id": "cmp629-final-v2-20261011",
+      "initial_state": [
+        -0.5963094234466553,
+        0.0
+      ],
+      "reset_seed": 900000,
+      "return": -200.0,
+      "source_checkpoint_sha256": "26f5ed1ecc4d48b549461faa2b8458c7cdf2d102dc1a447ce3739df23ef60ff7",
+      "steps": 200,
+      "success": false,
+      "train_seed": 3100,
+      "video": "dyna_q__12x4__s3100.mp4",
+      "video_sha256": "ef94bca5d8f81f2fed7a7422f59f9ef1db5d72c33b4c0c72215931c85dd3fc6f"
+    }
+  ],
+  "selection_rule": "smallest training seed, fixed demo seed 900000; no outcome selection"
+}

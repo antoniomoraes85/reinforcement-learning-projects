@@ -5,13 +5,14 @@ Execute na raiz do mini-projeto. Python suportado/testado: 3.12. No computador o
 ```powershell
 py -3.12 -m venv .venv
 & '.\.venv\Scripts\python.exe' -m pip install -r requirements-entrega.txt
+& '.\.venv\Scripts\python.exe' scripts/extrair_bundles.py
 & '.\.venv\Scripts\python.exe' -m pytest testes -q
 ```
 
 ## Validação (não treina)
 
 ```powershell
-& '.\.venv\Scripts\python.exe' -B scripts/preservar_historico.py
+& '.\.venv\Scripts\python.exe' -B scripts/preservar_historico.py --publico
 & '.\.venv\Scripts\python.exe' -B scripts/analisar_campanha_v2.py
 ```
 
@@ -24,6 +25,14 @@ No clone público, extraia primeiro os bundles publicados conforme README; eles 
 ```
 
 Este comando exige o gate GO. Reutiliza bundles completos válidos com hashes de JSON/CSV/Q-table; não repete treinamentos completos. Os resultados permanecem em `resultados/cmp629-final-v2-20261011`. Um bundle parcial/corrompido é preservado e rejeitado, nunca silenciosamente sobrescrito. Se houver interrupção durante uma gravação, use o recuperador documentado após encerrar todos os workers da campanha. Não remova locks de um processo ativo. Dois lançamentos simultâneos não são permitidos.
+
+Recuperação automática, somente após não haver workers ativos:
+
+```powershell
+& '.\.venv\Scripts\python.exe' -B scripts/retomar_campanha.py --autorizado-apos-go
+```
+
+O recuperador move bundles incompletos/inválidos para `recovery/` (recuperáveis) e reinicia somente as execuções sem bundle válido. Não recupera no meio de um episódio; uma execução incompleta recomeça de sua seed original. Bundles completos ficam no cache. Na pasta original, use `preservar_historico.py` sem `--publico` para verificar também logs auxiliares.
 
 ## Figuras e animações (sem treino)
 
