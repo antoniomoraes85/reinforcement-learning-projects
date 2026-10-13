@@ -2,6 +2,16 @@
 
 Comparação de Q-learning, SARSA(λ) e Dyna-Q em MountainCar-v0, com grades 4×2 e 12×4.
 
+## Entrega final consolidada — 13/10/2026
+
+- [Notebook obrigatório, com dados e vídeos incorporados](entrega_final/CMP629_MOUNTAINCAR_ENTREGA_FINAL.ipynb)
+- [Abrir notebook final no Google Colab](https://colab.research.google.com/github/antoniomoraes85/reinforcement-learning-projects/blob/main/mountaincar-tabular/entrega_final/CMP629_MOUNTAINCAR_ENTREGA_FINAL.ipynb)
+- [Relatório acadêmico definitivo — PDF](entrega_final/CMP629_MOUNTAINCAR_RELATORIO_DEFINITIVO.pdf)
+- [Baixar pacote completo — ZIP](https://github.com/antoniomoraes85/reinforcement-learning-projects/raw/refs/heads/main/mountaincar-tabular/entrega_final/CMP629_MOUNTAINCAR_PACOTE_ENTREGA.zip)
+- [Validação](entrega_final/VALIDACAO_ENTREGA.json) · [Notas de integração e limites](entrega_final/INTEGRACAO_GITHUB.md)
+
+Notebook final: 15 células executadas sem erro em processo Python novo com IPython, sem novos treinamentos. PDF: 36 páginas, 16 figuras, apresentação ABNT, percentis entre seeds e apêndice de código. O teste no Colab hospedado permanece pendente. Os arquivos abaixo preservam o histórico anterior; para submissão, use a entrega consolidada acima.
+
 ## Estado verificável
 
 **Campanha final concluída: 60/60 execuções válidas, 60 checkpoints e 120 CSVs brutos.** Dez seeds por algoritmo/grade, 100 avaliações comuns por política. Triagem: **108 JSONs reais preservados**. Gate FASE A: GO (25 testes); suíte adicional anterior: 33 testes aprovados. Os seis smokes técnicos são separados e não integram a campanha final. Nenhum treinamento foi executado na rodada de entrega de 12/10/2026.

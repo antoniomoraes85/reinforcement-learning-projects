@@ -1,0 +1,21 @@
+{
+  "pdf_pages": 36,
+  "figures": 16,
+  "page_size": [
+    595.280029296875,
+    841.8900146484375
+  ],
+  "margins_cm": {
+    "left": 3,
+    "top": 3,
+    "right": 2,
+    "bottom": 2
+  },
+  "code_cells": 15,
+  "quantiles": "numpy.quantile method=linear; 10 policies per group",
+  "quantile_rows": 30,
+  "original_source_hashes_match": true,
+  "new_training_runs": 0,
+  "new_policy_evaluations": 0,
+  "colab_hosted_tested": false
+}
