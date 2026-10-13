@@ -1,3 +1,9 @@
+# Atualização — entrega final de 13/10/2026
+
+Notebook, PDF e pacote portátil publicados em [entrega_final](entrega_final). Consulte [INTEGRACAO_GITHUB.md](entrega_final/INTEGRACAO_GITHUB.md) para o estado desta publicação. Resultados e treinamentos anteriores preservados. Colab hospedado ainda não testado nesta rodada.
+
+---
+
 # Estado canônico — CMP629 MountainCar
 
 ## Escopo e autorização

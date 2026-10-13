@@ -1,0 +1,5 @@
+# Revisão final ABNT — 13/10/2026
+
+Relatório de 36 páginas e 16 figuras. Todas as páginas renderizadas e inspecionadas em mosaicos; gráficos de distribuição e custos inspecionados em resolução maior. Sumário, referências, capa/rosto/resumos, numeração superior direita, tabelas e equações conferidos. Blocos de código mantidos inteiros e numeração de linhas dentro da margem. Sem avisos de caracteres ausentes ou caixas excedentes na compilação final. Geometria A4, margens 3/2 cm, fonte Nimbus Roman 12, espaçamento 1,5. A substituição de Times New Roman e adaptação ao relatório de disciplina estão declaradas no Apêndice B.
+
+Notebook: 15 células executadas sem erro em processo Python novo com IPython. Apenas análises e gráficos dos registros existentes; nenhum treinamento ou avaliação de políticas. Os percentis usam dez seeds por grupo, interpolação linear, e são explicitamente separados dos intervalos de confiança. P95 de seleção de ação é preservado por política, sem alegação de P95 global. Os 11 hashes de módulos da proveniência foram conferidos. Colab hospedado não foi executado.

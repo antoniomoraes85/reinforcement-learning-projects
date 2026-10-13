@@ -1,0 +1,37 @@
+{
+  "notebook_format": "valid",
+  "executed_code_cells": 15,
+  "cell_errors": 0,
+  "execution": {
+    "mode": "fresh Python process with IPython in-process execution; no Jupyter TCP server",
+    "code_cells": 15,
+    "elapsed_seconds": 97.46799421310425,
+    "errors": 0,
+    "training_executed": false,
+    "evaluation_executed": false,
+    "jupyter_kernel": "blocked by environment network-interface/ZeroMQ permissions",
+    "colab_hosted": "not executed",
+    "nbformat": "valid"
+  },
+  "pdf_pages": 36,
+  "pdf_page_size": [
+    595.28,
+    841.89
+  ],
+  "original_source_files_byte_identical": 204,
+  "bundles": {
+    "final_v2_bundles.zip": {
+      "entries": 240,
+      "crc": "ok"
+    },
+    "triagem_originais.zip": {
+      "entries": 112,
+      "crc": "ok"
+    }
+  },
+  "new_training_runs": 0,
+  "new_policy_evaluations": 0,
+  "visual_review": "See REVISAO_VISUAL.md; PDF rendered and inspected",
+  "github_source_commit": "19dcf17bfa589bb3cb16da4bd9f1862c501fddbd",
+  "github_mutated": false
+}
