@@ -56,4 +56,11 @@ Média de dez políticas por célula, não episódios independentes. SARSA apres
 
 Modo padrão do notebook não treina. `RUN_TRAINING` e `RUN_DEMO` ficam falsos. Colab hospedado não foi executado por esta máquina; validação usa kernel local limpo e downloads públicos. Não alegar superioridade geral nem causalidade do state aliasing. Material da disciplina/PDFs, credenciais e projeto Monte Carlo não são alterados/publicados por esta entrega.
 
-Integrantes corrigidos: JOSE ANTONIO COUTINHO DE MORAES FILHO; FERNANDO BOSQUETTI TEDESCO; GABRIEL DE SENNE AMORIM; CAETANO GUBERT MENEGHETTI.
+Integrantes (ordem alfabética e caixa conforme solicitação): Caetano gubert meneghetti; Fernando bosquetti tedesco; Gabriel de senne amorim; José antônio coutinho de moraes filho.
+
+
+## Correção editorial solicitada em 13/10/2026
+
+Ordem dos integrantes: **Caetano gubert meneghetti; Fernando bosquetti tedesco; Gabriel de senne amorim; José antônio coutinho de moraes filho.** Remover da seção de referências finais as entradas autorais **ANTONIOMORAES85 — Reinforcement learning projects: MountainCar tabular (2026)** e **UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL — Mini-Projeto: modelagem e solução de problemas com Aprendizado por Reforço**. Os links internos de proveniência do código e protocolo **não são referências bibliográficas** e devem ser mantidos para auditoria científica.
+
+**Atenção à consistência dos binários:** este registro textual documenta a alteração editorial; confira o arquivo PDF/ZIP/notebook publicado antes da submissão. A publicação dos novos arquivos binários é uma etapa independente. O notebook é o entregável principal; o teste no Colab hospedado permanece pendente.
