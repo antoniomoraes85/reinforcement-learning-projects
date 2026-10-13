@@ -1,0 +1,27 @@
+name: CMP629 Diagnostico editorial
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/cmp629-diagnostico.yml
+permissions:
+  contents: read
+jobs:
+  extrair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pymupdf==1.26.7
+      - name: Inspecionar autoria e referencias do PDF publicado
+        run: |
+          python - <<'PY'
+          import fitz, pathlib
+          p=fitz.open('mountaincar-tabular/entrega_final/CMP629_MOUNTAINCAR_RELATORIO_DEFINITIVO.pdf')
+          print('TOTAL_PAGES',len(p))
+          for i in [0,*range(max(0,len(p)-4),len(p))]:
+              print('\n--- PAGE',i+1,'---')
+              print(p[i].get_text()[:18000])
+          PY
