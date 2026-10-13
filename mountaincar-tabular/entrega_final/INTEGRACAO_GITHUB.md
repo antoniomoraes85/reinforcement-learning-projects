@@ -13,4 +13,4 @@ O manifesto dentro desta pasta descreve o conteúdo extraído do ZIP. Para consu
 
 Revisão acadêmica: apresentação conforme o modelo enviado (Carta, margens 2,54 cm e fonte sem serifa), 16 figuras, percentis entre seeds por interpolação linear, boxplots com todas as seeds e apêndice com código literal dos agentes. Nenhum treino repetido.
 
-Integrantes corrigidos: JOSE ANTONIO COUTINHO DE MORAES FILHO; FERNANDO BOSQUETTI TEDESCO; GABRIEL DE SENNE AMORIM; CAETANO GUBERT MENEGHETTI.
+Integrantes (ordem alfabética e caixa conforme solicitação): Caetano gubert meneghetti; Fernando bosquetti tedesco; Gabriel de senne amorim; José antônio coutinho de moraes filho.
