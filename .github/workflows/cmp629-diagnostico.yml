@@ -15,13 +15,21 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install pymupdf==1.26.7
-      - name: Inspecionar autoria e referencias do PDF publicado
+      - name: Inspecionar autores e fontes do PDF
         run: |
           python - <<'PY'
-          import fitz, pathlib
+          import fitz
           p=fitz.open('mountaincar-tabular/entrega_final/CMP629_MOUNTAINCAR_RELATORIO_DEFINITIVO.pdf')
           print('TOTAL_PAGES',len(p))
-          indices=[0]+[i for i,pg in enumerate(p) if 'ANTONIOMORAES85' in pg.get_text().upper() or 'UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL.' in pg.get_text().upper()]\n          print('TARGET_PAGES',indices)\n          for i in dict.fromkeys(indices):
-              print('\n--- PAGE',i+1,'---')
-              print(p[i].get_text()[:18000])\n              for line in [ln for bl in p[i].get_text('dict')['blocks'] if bl['type']==0 for ln in bl['lines']]:\n                  tx=''.join(sp['text'] for sp in line['spans']).strip()\n                  if (i==0 and 105 < line['bbox'][1] < 325) or ('ANTONIOMORAES85' in tx.upper()) or ('UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL' in tx.upper()):\n                      print('LINE_BOX',tuple(round(v,1) for v in line['bbox']), repr(tx[:230]))
+          indices=[0]+[i for i,pg in enumerate(p) if 'ANTONIOMORAES85' in pg.get_text().upper() or 'UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL.' in pg.get_text().upper()]
+          print('TARGET_PAGES',indices)
+          for i in dict.fromkeys(indices):
+              print('--- PAGE',i+1,'---')
+              print(p[i].get_text()[:20000])
+              for bl in p[i].get_text('dict')['blocks']:
+                  if bl['type'] != 0: continue
+                  for line in bl['lines']:
+                      tx=''.join(sp['text'] for sp in line['spans']).strip()
+                      if (i==0 and 105 < line['bbox'][1] < 325) or 'ANTONIOMORAES85' in tx.upper() or 'UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL' in tx.upper():
+                          print('LINE_BOX',tuple(round(v,1) for v in line['bbox']),repr(tx[:230]))
           PY
