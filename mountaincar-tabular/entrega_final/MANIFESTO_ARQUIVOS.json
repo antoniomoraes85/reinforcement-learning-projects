@@ -6,13 +6,13 @@
   "files": [
     {
       "path": "CMP629_MOUNTAINCAR_ENTREGA_FINAL.ipynb",
-      "bytes": 10400231,
-      "sha256": "d8b5ce58f49d6926aa0f2e4f3fc7909581a354ffb47ec90670cc7ff8429fe57e"
+      "bytes": 10400674,
+      "sha256": "a16109b32f7da70b0e401cf9f07efcabf59a3408608821f25d2736e38c79c17c"
     },
     {
       "path": "CMP629_MOUNTAINCAR_RELATORIO_DEFINITIVO.pdf",
-      "bytes": 1836554,
-      "sha256": "dbb4a829b358d903cfc8237ec98699c7d49efc1dcb67a02aed8e5eaf654e0ea2"
+      "bytes": 1818252,
+      "sha256": "02206f1e323b9ebc01b4fd5a09d4a83dcc6f6780be2aae2b84d12f7fb40327ab"
     },
     {
       "path": "LEIA_ME.md",
@@ -21,28 +21,28 @@
     },
     {
       "path": "PENDENCIAS_CONTINUACAO.md",
-      "bytes": 1265,
-      "sha256": "47b9abaa142b17aac06f94381f7bcaa43c465b9edce327dd6e12ceee740c236a"
+      "bytes": 1233,
+      "sha256": "5b2caeab89671131c11effda1b5c90c1680e47fb12aab8edeecfb4062e8da164"
     },
     {
       "path": "PROMPT_PARA_CONTINUAR_CMP629.md",
-      "bytes": 6648,
-      "sha256": "24305882534efbfcd4ab96298a91bee27b04a6a16c8e779a2510a99a8ce0062e"
+      "bytes": 6664,
+      "sha256": "0339fddd6c5df35ea6b60546888f72e96fc2090edd2582c7f1c13cc331642583"
     },
     {
       "path": "REVISAO_VISUAL.md",
-      "bytes": 1147,
-      "sha256": "d448f0d9a73b96c962f1e74d30e6f35fc913c2e990f1d64af754e28328c6448f"
+      "bytes": 455,
+      "sha256": "fb73ae3955402b4c8711a707029c32791e849bbee4103fedf87757c759e19a82"
     },
     {
       "path": "STATUS_ENTREGA.md",
-      "bytes": 2007,
-      "sha256": "b48815470a2c7a6e8fe667c91c687f74e74ba4b8c0b6e5fc3c9d766f6db069d4"
+      "bytes": 1956,
+      "sha256": "7759e54fb23adab6144538efa58a565902714a00f5ddbb1e3638f0a601970bc7"
     },
     {
       "path": "VALIDACAO_ENTREGA.json",
-      "bytes": 1003,
-      "sha256": "c6fa46480b401e156e5fadd172d9847e175ac7d2b132bcc91dc76da711dd61be"
+      "bytes": 1093,
+      "sha256": "e6cb0ee102e69fa60b991322a6fa978650213b5dc63b9eccf96853e543486293"
     },
     {
       "path": "VALIDACAO_EXECUCAO.json",
@@ -50,9 +50,9 @@
       "sha256": "11d1e61e961376bdd90c67945ffb0ab6e43a07cf607c1a7a0b8708bc866bbcb9"
     },
     {
-      "path": "VALIDACAO_REVISAO_ABNT.json",
-      "bytes": 430,
-      "sha256": "44318457e2d146da2c4bdb140800c670587ea95d788d650ba34b6a35e62c96ed"
+      "path": "VALIDACAO_REVISAO_MODELO.json",
+      "bytes": 443,
+      "sha256": "0af1013a256aabbe03efad681091fe66b73344c5bdc34a4db7aaa464f3a2290b"
     },
     {
       "path": "apoio/.gitattributes",
@@ -1076,38 +1076,38 @@
     },
     {
       "path": "construir_notebook.py",
-      "bytes": 41052,
-      "sha256": "3b13df5d81f909b1df3abb99a93167298890191fa92a5c53208c2bc77dbfb37e"
+      "bytes": 41171,
+      "sha256": "022075b805feb2b9a34e4c430a7daf7d9189f27eb6506f250fb107f62353fc07"
     },
     {
       "path": "construir_pdf.py",
-      "bytes": 26961,
-      "sha256": "abf453f25a23cecf6a9936725406b1a9b93cea4a70419e21761646440a360004"
+      "bytes": 23213,
+      "sha256": "0cf3582d338426737b58adbbce01dd02301f806f8b3a661c19f29ecfa20a1154"
     },
     {
       "path": "finalizar_pacote.py",
-      "bytes": 14870,
-      "sha256": "6434c4ac3c8edb04f824462def83bb96e97371262df6a077a6ff40d46d5f2e01"
+      "bytes": 14895,
+      "sha256": "c54c0145f82c5505d8584259434debddbd4d3a77b685a11c686782c4bf2e33a0"
     },
     {
       "path": "fonte_relatorio/compilacao.txt",
-      "bytes": 8925,
-      "sha256": "0db666c99eaff99ac76be3f379538ed8a810ac3c0c2c46f35769a428c1aac966"
+      "bytes": 8511,
+      "sha256": "f84f0238af4f31fc77c234a5355c84b98b30d5426a7f6464097ab268f8c4ffc4"
     },
     {
       "path": "fonte_relatorio/conversao.txt",
-      "bytes": 379,
-      "sha256": "543d1257b57a2e0b7e25f8a6bb9c184913b36a8c046d49a7fe832c933fec1acc"
+      "bytes": 299,
+      "sha256": "78067968a466aff3693cdcf9a512a1dca28faf7b51bfac402c956b36eef5bf30"
     },
     {
       "path": "fonte_relatorio/relatorio.tex",
-      "bytes": 61978,
-      "sha256": "e572925cca2bf59a9434c14a36469140b45ff35491a6ac8bae4435ca06bff1b1"
+      "bytes": 57561,
+      "sha256": "6cc01b42a1d1ecefdeefbccbc05f5de46eefcf6dacfbf74137273877a595584f"
     },
     {
       "path": "revisao_visual_geometria.json",
-      "bytes": 156,
-      "sha256": "873399ed427462a33ee3a749df3ab830d57e479ad49897b2c12e66d38c3b35d4"
+      "bytes": 63,
+      "sha256": "74d168bf123341f70b52d21cf3851b02f08fcb0e11f0942e7a48d0d09ee71af6"
     },
     {
       "path": "validacao_kernel_limpo/cmp629_reproduzido/atualizacoes_q_12x4.pdf",

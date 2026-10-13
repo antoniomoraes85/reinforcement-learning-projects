@@ -1,0 +1,20 @@
+{
+  "pdf_pages": 29,
+  "figures": 16,
+  "page_size": [
+    612,
+    792
+  ],
+  "margins_pt": 72,
+  "font_substitution": "Nimbus Sans no lugar de Arial",
+  "group_members": [
+    "JOSE ANTONIO COUTINHO DE MORAES FILHO",
+    "FERNANDO BOSQUETTI TEDESCO",
+    "GABRIEL DE SENNE AMORIM",
+    "CAETANO GUBERT MENEGHETTI"
+  ],
+  "all_members_on_first_page": true,
+  "margin_violations": [],
+  "code_cells_unchanged": true,
+  "new_training_runs": 0
+}
