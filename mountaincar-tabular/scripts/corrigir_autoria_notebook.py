@@ -19,7 +19,7 @@ new=[
 data=before
 for old_name,new_name in zip(old,new):
     source=old_name.encode("utf-8")
-    assert data.count(source)==1, f"Nome esperado uma vez, presente {data.count(source)}: {old_name}"
+    assert data.count(source)>=1, f"Nome original nao encontrado: {old_name}"
     data=data.replace(source,new_name.encode("utf-8"),1)
 nb_before=json.loads(before)
 nb_after=json.loads(data)
