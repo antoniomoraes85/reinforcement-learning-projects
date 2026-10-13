@@ -20,3 +20,9 @@
 
 ## Não iniciados
 Nenhum entregável obrigatório permanece não iniciado. O teste no Colab hospedado e a comparação com o notebook-base específico permanecem pendentes externos.
+
+## Revisão editorial posterior — 13/10/2026
+- Publicados na branch main o PDF de 29 páginas corrigido, o DOCX editável, a correção da primeira célula do notebook e o novo pacote de grupo com hashes SHA-256.
+- Conferência automatizada: 29 páginas do PDF; referência Sutton/Barto mantida; duas referências removidas; texto de todas as páginas 2–24 e 27–29 preservado; 31 células do notebook mantidas e células 1–30 idênticas.
+- A publicação foi concluída via GitHub Actions. O ZIP amplo antigo permanece como histórico; o ZIP de grupo é o pacote atualizado.
+- Não confundir esta revisão editorial com reexecução no Google Colab hospedado. Não houve novo treino nem nova avaliação.
