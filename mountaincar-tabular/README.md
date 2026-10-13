@@ -6,8 +6,10 @@ Comparação de Q-learning, SARSA(λ) e Dyna-Q em MountainCar-v0, com grades 4×
 
 - [Notebook obrigatório, com dados e vídeos incorporados](entrega_final/CMP629_MOUNTAINCAR_ENTREGA_FINAL.ipynb)
 - [Abrir notebook final no Google Colab](https://colab.research.google.com/github/antoniomoraes85/reinforcement-learning-projects/blob/main/mountaincar-tabular/entrega_final/CMP629_MOUNTAINCAR_ENTREGA_FINAL.ipynb)
-- [Relatório acadêmico definitivo — PDF](entrega_final/CMP629_MOUNTAINCAR_RELATORIO_DEFINITIVO.pdf)
-- [Baixar pacote completo — ZIP](https://github.com/antoniomoraes85/reinforcement-learning-projects/raw/refs/heads/main/mountaincar-tabular/entrega_final/CMP629_MOUNTAINCAR_PACOTE_ENTREGA.zip)
+- [Relatório acadêmico definitivo revisado — PDF (29 páginas)](entrega_final/CMP629_MOUNTAINCAR_RELATORIO_DEFINITIVO.pdf)
+- [Relatório em Word editável — DOCX](entrega_final/CMP629_MOUNTAINCAR_RELATORIO_EDITAVEL.docx)
+- [Pacote revisado para o grupo — ZIP (notebook + PDF + DOCX)](entrega_final/CMP629_MOUNTAINCAR_PACOTE_GRUPO.zip)
+- [Pacote amplo anterior — ZIP histórico](entrega_final/CMP629_MOUNTAINCAR_PACOTE_ENTREGA.zip) — conserva snapshot anterior e não substitui o pacote revisado.
 - [Validação](entrega_final/VALIDACAO_ENTREGA.json) · [Notas de integração e limites](entrega_final/INTEGRACAO_GITHUB.md)
 
 Notebook final: 15 células executadas sem erro em processo Python novo com IPython, sem novos treinamentos. PDF: 29 páginas, 16 figuras, formatação conforme o modelo enviado, percentis entre seeds e apêndice de código. O teste no Colab hospedado permanece pendente. Os arquivos abaixo preservam o histórico anterior; para submissão, use a entrega consolidada acima.
@@ -63,4 +65,4 @@ Integrantes (ordem alfabética e caixa conforme solicitação): Caetano gubert m
 
 Ordem dos integrantes: **Caetano gubert meneghetti; Fernando bosquetti tedesco; Gabriel de senne amorim; José antônio coutinho de moraes filho.** Remover da seção de referências finais as entradas autorais **ANTONIOMORAES85 — Reinforcement learning projects: MountainCar tabular (2026)** e **UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL — Mini-Projeto: modelagem e solução de problemas com Aprendizado por Reforço**. Os links internos de proveniência do código e protocolo **não são referências bibliográficas** e devem ser mantidos para auditoria científica.
 
-**Atenção à consistência dos binários:** este registro textual documenta a alteração editorial; confira o arquivo PDF/ZIP/notebook publicado antes da submissão. A publicação dos novos arquivos binários é uma etapa independente. O notebook é o entregável principal; o teste no Colab hospedado permanece pendente.
+**Publicação revisada:** o PDF de 29 páginas, o DOCX e a primeira célula do notebook foram atualizados no repositório; as demais células e resultados históricos foram preservados. O pacote revisado para o grupo reúne esses três entregáveis. O ZIP amplo anterior permanece como registro histórico e não deve ser confundido com a revisão editorial. O notebook é o entregável principal; o teste no Colab hospedado permanece pendente.
