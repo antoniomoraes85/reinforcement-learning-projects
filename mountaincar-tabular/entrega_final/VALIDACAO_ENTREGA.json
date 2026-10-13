@@ -13,10 +13,10 @@
     "colab_hosted": "not executed",
     "nbformat": "valid"
   },
-  "pdf_pages": 36,
+  "pdf_pages": 29,
   "pdf_page_size": [
-    595.28,
-    841.89
+    612.0,
+    792.0
   ],
   "original_source_files_byte_identical": 204,
   "bundles": {
@@ -33,5 +33,5 @@
   "new_policy_evaluations": 0,
   "visual_review": "See REVISAO_VISUAL.md; PDF rendered and inspected",
   "github_source_commit": "19dcf17bfa589bb3cb16da4bd9f1862c501fddbd",
-  "github_mutated": false
+  "github_publication": "Entrega anterior integrada ao main; esta revisão é publicada após a geração do pacote."
 }

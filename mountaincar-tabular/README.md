@@ -10,7 +10,7 @@ Comparação de Q-learning, SARSA(λ) e Dyna-Q em MountainCar-v0, com grades 4×
 - [Baixar pacote completo — ZIP](https://github.com/antoniomoraes85/reinforcement-learning-projects/raw/refs/heads/main/mountaincar-tabular/entrega_final/CMP629_MOUNTAINCAR_PACOTE_ENTREGA.zip)
 - [Validação](entrega_final/VALIDACAO_ENTREGA.json) · [Notas de integração e limites](entrega_final/INTEGRACAO_GITHUB.md)
 
-Notebook final: 15 células executadas sem erro em processo Python novo com IPython, sem novos treinamentos. PDF: 36 páginas, 16 figuras, apresentação ABNT, percentis entre seeds e apêndice de código. O teste no Colab hospedado permanece pendente. Os arquivos abaixo preservam o histórico anterior; para submissão, use a entrega consolidada acima.
+Notebook final: 15 células executadas sem erro em processo Python novo com IPython, sem novos treinamentos. PDF: 29 páginas, 16 figuras, formatação conforme o modelo enviado, percentis entre seeds e apêndice de código. O teste no Colab hospedado permanece pendente. Os arquivos abaixo preservam o histórico anterior; para submissão, use a entrega consolidada acima.
 
 ## Estado verificável
 
@@ -55,3 +55,5 @@ Média de dez políticas por célula, não episódios independentes. SARSA apres
 `figuras/final_v2`: resultados das 60 execuções; `figuras/animacoes_final_v2`: seis vídeos individuais e duas comparações, vinculados aos checkpoints verificados. O notebook exibe somente gráficos/vídeos finais; triagem aparece em apêndice de proveniência. `figuras/auditoria_v2` preserva análises exploratórias e `figuras/animacoes_auditoria_v2` preserva o **smoke técnico**. A triagem original não salvava checkpoints; não recriamos vídeos históricos. Política de exibição: menor seed de treino (3100), reset 900000; falhas visíveis. No caso demonstrado, SARSA atinge o objetivo nas duas grades; Q-learning e Dyna-Q falham nessa seed, sem seleção de melhor caso.
 
 Modo padrão do notebook não treina. `RUN_TRAINING` e `RUN_DEMO` ficam falsos. Colab hospedado não foi executado por esta máquina; validação usa kernel local limpo e downloads públicos. Não alegar superioridade geral nem causalidade do state aliasing. Material da disciplina/PDFs, credenciais e projeto Monte Carlo não são alterados/publicados por esta entrega.
+
+Integrantes corrigidos: JOSE ANTONIO COUTINHO DE MORAES FILHO; FERNANDO BOSQUETTI TEDESCO; GABRIEL DE SENNE AMORIM; CAETANO GUBERT MENEGHETTI.

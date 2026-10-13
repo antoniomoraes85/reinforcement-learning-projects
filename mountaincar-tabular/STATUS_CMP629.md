@@ -31,3 +31,5 @@ Publicar e verificar os artefatos finais na branch de entrega; validar notebook 
 ## Histórico
 - 11/10/2026: inventário, baseline Git, manifesto, 25 testes, seis smokes, GO, início autorizado da campanha final. Figuras históricas corrigidas em pasta nova; oito MP4s de smoke reais produzidos (seis individuais e duas comparações), sem atribuição às políticas antigas.
 - 12/10/2026: campanha final concluída antes desta rodada; 60/60 confirmados. Entrega revisada: 24 PNGs finais (12 gráficos, seis mapas Q/política, seis trajetórias) e oito MP4s verificados; seis trajetórias greedy conferidas com os checkpoints. Relatório complementado com IC, medianas e denominadores condicionais. Suíte prévia de 33 testes preservada, sem repetição.
+
+Integrantes corrigidos: JOSE ANTONIO COUTINHO DE MORAES FILHO; FERNANDO BOSQUETTI TEDESCO; GABRIEL DE SENNE AMORIM; CAETANO GUBERT MENEGHETTI.
