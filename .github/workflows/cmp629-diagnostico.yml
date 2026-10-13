@@ -32,4 +32,12 @@ jobs:
                       tx=''.join(sp['text'] for sp in line['spans']).strip()
                       if (i==0 and 105 < line['bbox'][1] < 325) or 'ANTONIOMORAES85' in tx.upper() or 'UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL' in tx.upper():
                           print('LINE_BOX',tuple(round(v,1) for v in line['bbox']),repr(tx[:230]))
+          import json
+          nb=json.loads(open('mountaincar-tabular/entrega_final/CMP629_MOUNTAINCAR_ENTREGA_FINAL.ipynb',encoding='utf-8').read())
+          print('NOTEBOOK_CELLS',len(nb['cells']))
+          for idx,cell in enumerate(nb['cells']):
+              if cell['cell_type']!='markdown':continue
+              txt=''.join(cell['source'])
+              if any(k in txt.upper() for k in ['JOSE ANTONIO','BOSQUETTI','SENNE AMORIM','GUBERT MENEGHETTI','ANTONIOMORAES85.','UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL.']):
+                  print('CELL_MATCH',idx,repr(txt[:1500]))
           PY
